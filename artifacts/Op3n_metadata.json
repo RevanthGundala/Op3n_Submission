@@ -177,6 +177,25 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "getInbox",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "owner",
 						"type": "address"
 					},
@@ -264,7 +283,7 @@
 				],
 				"name": "safeMint",
 				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -332,6 +351,24 @@
 					}
 				],
 				"name": "setApprovalForAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_i",
+						"type": "uint256"
+					}
+				],
+				"name": "setInbox",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -680,11 +717,11 @@
 			]
 		},
 		"Op3n.sol": {
-			"keccak256": "0x5a7d14555e29af11af2cb81ad3a50a3b1afcb3406f22227c7b07e12dd6aea802",
+			"keccak256": "0x8cd2fd82d0f55fea60f195ab4c9120de0287da0c2c73326221ece5833adbc22f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://41ee5b12bc388ec683da34d248634a92c79a3806a5105f8e1b900546d6e8bf26",
-				"dweb:/ipfs/QmPWQpPDkc5FQ7J7B67GS9r1BkiZxZDr5zK2HXLNTK9yMu"
+				"bzz-raw://4d6d8483adfca0712c0e8bd22ca257c349af8a85adcf5ff3b125dc61ef5041ca",
+				"dweb:/ipfs/QmQ3ExiWgGCGfMH4cpyHnN6X33CVbRmY9UbgsccThNJRyF"
 			]
 		}
 	},

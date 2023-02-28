@@ -12,14 +12,27 @@ contract Op3n is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable {
 
     Counters.Counter private _tokenIdCounter;
     event NFTMinted(uint256); //Event to track in logs and update front end.
+    mapping(address => uint[]) private Op3nMap; //Op3nMap track all address and inbox elements
 
     constructor() ERC721("op3n", "OP3") {}
 
-    function safeMint(address to, string memory uri) public onlyOwner {
+    //set the array for user address with token value
+    function setInbox(address _addr, uint _i) public {
+        Op3nMap[_addr].push(_i);
+    }
+
+    function getInbox(address _addr) public view returns (uint[] memory) {
+        return Op3nMap[_addr];
+    }
+
+    function safeMint(address to, string memory uri) public payable {
         uint256 tokenId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         _safeMint(to, tokenId);
         _setTokenURI(tokenId, uri);
+
+        //set the NFT Receiver's inbox 
+        setInbox(to,tokenId);
         emit NFTMinted(tokenId);  //Check Token Id value
     }
 
