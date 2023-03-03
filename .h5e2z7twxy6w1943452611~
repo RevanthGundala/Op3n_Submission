@@ -1,0 +1,9 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin: 0.5em;
+  align-items: right;
+  min-height: 100vh;
+}
+
