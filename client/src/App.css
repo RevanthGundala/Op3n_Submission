@@ -28,17 +28,36 @@
   text-align: center;
 }
 
-.sidebar ul{
-  list-style-type: none;
-  padding-left: 0.75rem;
+.navlist {
+  width: 100%;
 }
 
-.sidebar li>i{
+.navlink {
+  transition: all 0.5s;
+}
+
+.sidebar .navlink:hover:not(.selected){
+  background-color: aqua;
+  color: black;
+}
+
+.sidebar .navlink.selected{
+  background-color:aquamarine;
+  color: black;
+}
+
+.sidebar .navlink>a{
+  cursor: pointer;
+  width: 100%;
+  padding: 0.75rem 0 0.75rem 0;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar .navlink i{
   padding-right: 10px;
-}
-
-.sidebar li:not(:last-child){
-  padding-bottom: 1.5rem;
+  padding-left: 15%;
 }
 
 .inbox-container{
