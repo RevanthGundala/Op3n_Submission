@@ -2,6 +2,10 @@
   box-sizing: inherit;
 }
 
+.App{
+  display: flex;
+}
+
 .sidebar {
   position: absolute;
   background-color: #001f8d;
