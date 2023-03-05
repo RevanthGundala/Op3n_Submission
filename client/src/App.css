@@ -2,8 +2,13 @@
   box-sizing: inherit;
 }
 
+button{
+  cursor: pointer;
+}
+
 .App{
   display: flex;
+  box-sizing: border-box;
 }
 
 .sidebar {
@@ -36,13 +41,14 @@
   transition: all 0.5s;
 }
 
-.sidebar .navlink:hover:not(.selected){
-  background-color: aqua;
+.sidebar .navlink.selected{
+  background-color:cornflowerblue;
   color: black;
+  font-weight: 600;
 }
 
-.sidebar .navlink.selected{
-  background-color:aquamarine;
+.sidebar .navlink:hover{
+  background-color:lightskyblue;
   color: black;
 }
 
@@ -121,4 +127,30 @@ section>div:first-child>button:hover{
 
 section h2{
   font-size: xx-large;
+}
+
+.connection-menu{
+  display:flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 1rem;
+  justify-content: space-evenly;
+  align-content: center;
+
+}
+
+.connection-menu>div:first-child{
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.wallet-btn{
+  border: none;
+  border-radius: 16px;
+  background-color:#001f8d;
+  color: white;
+  transition: all 0.5s;
+  font-size: 1rem;
+  padding: 0.66rem;
 }
