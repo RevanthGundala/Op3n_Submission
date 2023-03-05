@@ -2,11 +2,17 @@
   box-sizing: inherit;
 }
 
-button{
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+button {
   cursor: pointer;
 }
 
-.App{
+.App {
   display: flex;
   box-sizing: border-box;
 }
@@ -25,7 +31,7 @@ button{
   top: 0;
 }
 
-.sidebar>.logo{
+.sidebar>.logo {
   padding: 1rem;
   padding-right: 1.3rem;
   width: 70%;
@@ -41,18 +47,18 @@ button{
   transition: all 0.5s;
 }
 
-.sidebar .navlink .active{
-  background-color:cornflowerblue;
+.sidebar .navlink .active {
+  background-color: cornflowerblue;
   color: black;
   font-weight: 600;
 }
 
-.sidebar .navlink:hover{
-  background-color:lightskyblue;
+.sidebar .navlink:hover {
+  background-color: lightskyblue;
   color: black;
 }
 
-.sidebar .navlink>a{
+.sidebar .navlink>a {
   cursor: pointer;
   width: 100%;
   padding: 0.75rem 0 0.75rem 0;
@@ -61,12 +67,12 @@ button{
   color: inherit;
 }
 
-.sidebar .navlink i{
+.sidebar .navlink i {
   padding-right: 10px;
   padding-left: 15%;
 }
 
-.inbox-container{
+.inbox-container {
   position: absolute;
   top: 15%;
   right: 5%;
@@ -84,16 +90,16 @@ button{
 
 .listedMessage:not(:first-child):hover {
   transition: all 0.5s;
-  background-color:aqua;
+  background-color: aqua;
   cursor: pointer;
 }
 
-.listedMessage:not(:last-child){
+.listedMessage:not(:last-child) {
   border-style: none;
   border-bottom: 1px solid black;
 }
 
-.listedMessage:first-child{
+.listedMessage:first-child {
   border-radius: 15px 15px 0 0;
   font-weight: 600;
 }
@@ -103,14 +109,14 @@ section {
   width: 85%;
 }
 
-section>div:first-child{
+section>div:first-child {
   padding-left: 2.7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-section>div:first-child>button{
+section>div:first-child>button {
   transition: all 0.5s;
   margin-right: 3rem;
   padding: 0.2rem;
@@ -120,17 +126,18 @@ section>div:first-child>button{
   background-color: #001f8d;
   color: whitesmoke;
 }
-section>div:first-child>button:hover{
+
+section>div:first-child>button:hover {
   background-color: aqua;
   color: black;
 }
 
-section h2{
+section h2 {
   font-size: xx-large;
 }
 
-.connection-menu{
-  display:flex;
+.connection-menu {
+  display: flex;
   flex-wrap: wrap;
   width: 100%;
   padding: 1rem;
@@ -139,18 +146,56 @@ section h2{
 
 }
 
-.connection-menu>div:first-child{
+.connection-menu>div:first-child {
   text-align: center;
   width: 100%;
   padding: 0.5rem;
 }
 
-.wallet-btn{
+.wallet-btn {
   border: none;
   border-radius: 16px;
-  background-color:#001f8d;
+  background-color: #001f8d;
   color: white;
   transition: all 0.5s;
   font-size: 1rem;
   padding: 0.66rem;
+}
+
+.displayMessage-container {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  width: 75%;
+  height: 80%;
+  display: flex;
+  margin: 1rem;
+  border-radius: 15px;
+  border: 2px solid black;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.displayMessage-container>* {
+  padding: 0.25rem;
+}
+
+.displayMessage-container>h3 {
+  width: 85%;
+}
+
+.displayMessage-container>h4 {
+  width: 15%;
+}
+
+.displayMessage-container>h3, .displayMessage-container>h4, .displayMessage-container>h4+div {
+  border-bottom: 1px solid black;
+}
+
+.displayMessage-container>h4+div {
+  width: 100%;
+}
+
+.displayMessage-container>h4+div+div {
+  width: 100%;
 }
