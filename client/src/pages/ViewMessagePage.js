@@ -5,7 +5,7 @@ import DisplayMessage from "../components/DisplayMessage";
 function ViewMessagePage() {
     const { msgAddress } = useParams();
     //GET MESSAGE DATA USING ADDRESS
-    msgData = {
+    const msgData = {
         address: 'ADDRESS',
         sender: 'SENDER',
         date: 'DATE',
