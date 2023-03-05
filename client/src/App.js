@@ -12,6 +12,7 @@ import Sidebar from './components/Sidebar';
 import ConnectPage from './pages/ConnectPage';
 import InboxPage from './pages/InboxPage';
 import NewMessagePage from './pages/NewMessagePage';
+import ViewMessagePage from './pages/ViewMessagePage';
 
 const { chains, provider } = configureChains(
   [mainnet, polygon, optimism, arbitrum, sepolia],
@@ -41,6 +42,7 @@ function App() {
                 <Route path='/connect' element={<ConnectPage />} />
                 <Route path='/' element={<InboxPage />} />
                 <Route path='/send' element={<NewMessagePage />} />
+                <Route path='/view/:msgAddress' element={<ViewMessagePage />} />
               </Routes>
             </section>
           </div>
