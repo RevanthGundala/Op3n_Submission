@@ -1,7 +1,7 @@
 import React from "react";
 
 function DisplayMessage(props) {
-    const {content, subject, sender, date} = props
+    const {content, subject, sender, date} = props.messageData
     return (
         <div className="DisplayMessage-container">
             <h3>{subject}</h3>
