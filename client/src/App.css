@@ -41,7 +41,7 @@ button{
   transition: all 0.5s;
 }
 
-.sidebar .navlink.selected{
+.sidebar .navlink .active{
   background-color:cornflowerblue;
   color: black;
   font-weight: 600;
